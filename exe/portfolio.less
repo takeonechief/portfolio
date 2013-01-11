@@ -1,0 +1,409 @@
+/* Add additional stylesheets below
+-------------------------------------------------- */
+
+/* ------------------------------------------------- */ 
+/*      varialbles                                   */
+/* ------------------------------------------------- */
+@lightmintgreenbg: #F8FaF4; /*F8FaF4 or honeydew f0fff0*/
+@lightmintgreen: #f0fff0; /*F8FaF4 or honeydew f0fff0*/
+/*
+  Bootstrap's documentation styles
+  Special styles for presenting Bootstrap's documentation and examples
+*/
+.border-radius (@radius) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+.rotate (@deg) {
+  -webkit-transform: rotate(@deg);
+  -moz-transform:    rotate(@deg);
+  -ms-transform:     rotate(@deg);
+  -o-transform:      rotate(@deg);
+}
+.opacity (@opacity: 0.5) {
+  -webkit-opacity:  @opacity;
+  -moz-opacity:     @opacity;
+  opacity:    @opacity;
+}
+.transitionAll {
+transition:all 0.4s;
+-moz-transition:all 0.4s; /* Firefox 4 */
+-webkit-transition:all 0.4s; /* Safari and Chrome */
+-o-transition:all 0.4s; /* Opera */
+}
+.gradient (@startColor: #eee, @endColor: white) {
+  background-color: @startColor;
+  background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+  background: -webkit-linear-gradient(top, @startColor, @endColor);
+  background: -moz-linear-gradient(top, @startColor, @endColor);
+  background: -ms-linear-gradient(top, @startColor, @endColor);
+  background: -o-linear-gradient(top, @startColor, @endColor);
+}
+.drop-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+  -webkit-box-shadow: @x @y @blur @spread rgba(0, 0, 0, @alpha);
+  -moz-box-shadow:  @x @y @blur @spread rgba(0, 0, 0, @alpha);
+  box-shadow:   @x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+.mixinColor (dark, @color) {
+  color: darken(@color, 30%);
+}
+
+/* ------------------------------------------------- */ 
+/*      global fonts                                 */
+/* ------------------------------------------------- */
+body 
+{
+  // font stack
+  font-family: 'helvetica neue', arial, sans-serif; 
+  // font size
+  font-size: 1em;
+  // font weight
+  font-weight: 200;
+  // font color
+  color: #393939;
+  background-color:#fafafa;
+}
+/* ------------------------------------------------- */ 
+/*      Native DOM objects                           */
+/* ------------------------------------------------- */
+
+.table th, .table td 
+{
+  border-top: 1px solid #fff;
+}
+a
+{
+  color:#888;
+}
+a:hover
+{
+  text-decoration:none;
+}
+/* ------------------------------------------------- */ 
+/*      Objects                                      */
+/* ------------------------------------------------- */
+.page-container
+{
+  // page width
+  width:980px;
+  margin:0 auto;
+}
+
+.summary
+{
+  margin-top:26px;
+  width:100%;
+  
+  .pad
+  {
+    
+  }
+}
+
+.summary-item
+{
+  width:600px;
+  .border-radius(3px);
+  background-color:#f8f8f8;
+  margin:0 auto;
+  border: 1px solid #f0f0f0;
+  border-color: transparent #eee #ccc #f0f0f0;
+  margin-top:36px;
+  
+  .pad
+  {
+    padding:20px; //560px
+    
+    .container-left
+    {
+      width:200px;
+      height:140px;
+      float:left;
+      margin-right:3px;
+      background-color:#ddd;
+      overflow:hidden;
+    }
+    .container-right
+    {
+      width:357px;
+      min-height:140px;
+      float:left;
+      background-color:#ddd;
+      color:#aaa;
+     
+    }
+    span.metric
+    {
+      display:inline-block;
+      width:100%;
+      text-align:center;
+      font-weight:600;
+      font-size:2.25em;
+      line-height:0.8em;
+      padding: 0 0 14px 0;
+    }
+  }
+}
+
+.about-me-wrap
+{
+  margin-top:58px;
+  
+  h2
+  {
+    color:#56b100;
+  }
+  .pad
+  {
+    padding:20px 0px;
+  }
+  h6
+  {
+    -moz-column-count:3; /* Firefox */
+    -webkit-column-count:3; /* Safari and Chrome */
+    column-count:3;
+    -moz-column-gap:40px; /* Firefox */
+    -webkit-column-gap:40px; /* Safari and Chrome */
+    column-gap:40px;   
+  }
+}
+
+.table-project-wrap
+{
+  width:940px;
+  padding:20px;
+  margin:0 auto;
+  border:1px solid #eee;
+  
+  table
+  {
+    color:#888;
+    border:none;
+    margin:0;
+    
+    .table-data-client
+    {
+      width:20%
+    }
+      .table-data-desc
+    {
+      
+    }
+      .table-data-stack
+    {
+      width:30%
+    }
+  }
+}
+
+
+/* ------------------------------------------------- */ 
+/*      styles                                       */
+/* ------------------------------------------------- */
+p.clearBoth
+{
+  clear:both;
+  line-height:0;
+  margin:0;
+}
+.column-three
+{
+  -moz-column-count:3; /* Firefox */
+  -webkit-column-count:3; /* Safari and Chrome */
+  column-count:3;
+  -moz-column-gap:40px; /* Firefox */
+  -webkit-column-gap:40px; /* Safari and Chrome */
+  column-gap:40px;   
+}
+
+#fixedHeader
+{ 
+  width:190px;
+  z-index:99;
+  position:fixed;
+  top:0px;
+  right:120px;
+  height:228px;
+  box-shadow:0 1px 6px 2px rgba(0,0,0,0.5);
+  background-color:#f0f0f0; //#56b100
+  padding:8px;
+  
+  
+  ul
+  {
+    margin:60px 0 0 0;
+    list-style:none;
+    width:100%;
+    background-color:#fff;
+    padding:4px 0;
+    
+    li
+    {
+      display:block;
+      margin-bottom:2px;
+      
+      img
+      {
+        width:24px;
+        height:24px;
+      }
+      small
+      {
+        color:#56b100
+      }
+    }
+  }
+}
+.noShow {}
+.fixed {position: fixed;top:0;.opacity(0.9);}
+/* ------------------------------------------------- */ 
+/*      button                                       */
+/* ------------------------------------------------- */
+.join-button-wrap {
+  float: left;
+  margin: 82px 0 0 0;
+  padding: 8px;
+  .border-radius(5px);
+  background-color: rgba(0,0,0,.32); /* solid fill */
+  -moz-box-shadow: inset 0 -1px 0 rgba(255,255,255,.15); /* inner shadow */
+  -webkit-box-shadow: inset 0 -1px 0 rgba(255,255,255,.15); /* inner shadow */
+  box-shadow: inset 0 -1px 0 rgba(255,255,255,.15); /* inner shadow */
+}
+.join-beta-button
+{
+  margin-top:0px;
+  display:block;
+  padding:0;
+  z-index:999;
+}
+a.btn-green
+{
+  color:#FFF;
+  text-shadow:transparent 0px 0px 0px, #000 0px 1px 0px, #fff 0px -1px 0px;
+  display: inline-block;
+  *display: inline;
+  .gradient (#fff,#ddd );
+  background-repeat: repeat-x;
+}         
+a.btn-green:hover,
+a.btn-green:active,
+a.btn-green.active,
+a.btn-green.disabled,
+a.btn-green[disabled]
+{
+  background-color: #ddd;
+  *background-color: #ddd;
+  color:#fff;
+}
+/* ------------------------------------------------- */ 
+/*      cards                                        */
+/* ------------------------------------------------- */
+.card-item
+{
+  position:relative;
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -ms-perspective: 1000px;
+  -o-perspective: 1000px;
+  float: left; 
+  cursor:pointer;
+}
+.card-large 
+{
+  width: 100px;
+  height: 100px;
+  p
+  {
+    font-weight:600;color:#fff;margin-top:40px;text-align:center;font-size:1.25em;
+  }
+}
+.card-small
+{
+  width: 80px;
+  height: 80px;
+  p
+  {
+    font-weight:200;color:#fff;margin-top:40px;text-align:center;font-size:1em;
+  }
+}
+.card {
+  margin:1px 1px 0 0;
+  /*border: 1px solid #fff;*/
+  position:relative; 
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  
+  .front 
+  {
+    p
+    {
+      
+    }
+  }
+  .back
+  {
+     p
+    {
+      font-weight:600;color:#fff;margin-top:40px;text-align:center;font-size:1.25em;
+    } 
+  }
+}
+.card-item:hover .card 
+{
+  transform: rotateY(180deg);       
+  -webkit-transform: rotateY(180deg);       
+  -moz-transform: rotateY(180deg);       
+  -ms-transform: rotateY(180deg);       
+  -o-transform: rotateY(180deg);
+}
+
+.face
+{
+  position: absolute;
+  width:100%; height: 100%; 
+
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+}
+.card
+{
+  .photoshop{ background-color:#393939;}
+  .fireworks{ background-color:#393939;}
+  .code { background-color:#393939;}
+  
+  .front
+  {
+    
+  }
+  
+  .back
+  {
+    background-color:#000;
+    transform: rotateY(180deg);       
+    -webkit-transform: rotateY(180deg);       
+    -moz-transform: rotateY(180deg);       
+    -ms-transform: rotateY(180deg);       
+    -o-transform: rotateY(180deg);      
+  }
+}
+/*ie fix*/ 
+.front {
+  z-index: 10;
+}
+.card-item:hover .front {
+  z-index: 0;
+} 
